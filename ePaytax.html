@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="loginstyle.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title> pay tax </title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form method="post" action="http://localhost/suggestionmenu.php">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" id="username" name="username"  placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Source of Income</label>
+                            <input type="text" id="sourceincome" name="sourceincome"  placeholder="Enter source of income" >
+                        </div>
+
+
+                        
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select id="usergender" name="usergender" required>
+                                <option disabled selected>Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Total Income</label>
+                            <input type="number" id="totalincome" name="totalincome"  placeholder="Total Income" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Payment Type</label>
+                            <select id="paytype" name="paytype" required>
+                                <option disabled selected>Select payment</option>
+                                <option value="Phonpe">Phonpe</option>
+                                <option value="Gpay">Gpay</option>
+                                <option value="Paytm">Paytm</option>
+                            </select>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Payment Type</label>
+                            <select id="paytype" name="paytype" required style="padding: 5px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 100%;">
+                                <option disabled selected>Select payment</option>
+                                <option value="Phonpe" style="background-image: url('img/phonpelogo.png'); ">Phonpe</option>
+                                <option value="Gpay" style="background-image: url('gpay_logo.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px;">Gpay</option>
+                                <option value="Paytm" style="background-image: url('paytm_logo.png'); background-repeat: no-repeat; background-size: 20px 20px; padding-left: 30px;">Paytm</option>
+                            </select>
+                        </div>
+                         -->
+
+                        <button class="nextBtn" type="submit">
+                            <span class="btnText">Paytax</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+    <script src="loginjs.js"></script>
+    
+</body>
+</html>
