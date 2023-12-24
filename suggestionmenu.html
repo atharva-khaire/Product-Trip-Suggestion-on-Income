@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Menu Page</h1>
+    <p>Choose an option:</p>
+    
+    <form method="post">
+        <input type="submit" name="choice" value="Product Suggestion" formaction="http://localhost/extract.php">
+        <input type="submit" name="choice" value="Plan a Trip" formaction="http://localhost/extracttrip.php">
+    </form>
+
+    <h2>Information Provided:</h2>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?></td>
+        </tr>
+        <tr>
+            <td>Source of Income</td>
+            <td><?php echo isset($_POST['sourceincome']) ? $_POST['sourceincome'] : ''; ?></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><?php echo isset($_POST['usergender']) ? $_POST['usergender'] : ''; ?></td>
+        </tr>
+        <tr>
+            <td>Total Income</td>
+            <td><?php echo isset($_POST['totalincome']) ? $_POST['totalincome'] : ''; ?></td>
+        </tr>
+        <tr>
+            <td>Payment Type</td>
+            <td><?php echo isset($_POST['paytype']) ? $_POST['paytype'] : ''; ?></td>
+        </tr>
+    </table>
+</body>
+</html>
