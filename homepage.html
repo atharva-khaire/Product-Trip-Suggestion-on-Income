@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homepagestyle.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="signup.html">Login</a>
+        <a href="#">Tax Professionals & Others</a>
+        <a href="#">Contact Us</a>
+        <a href="#" class="menu">Menu</a> <!-- "Menu" link with the "menu" class -->
+        <a href="#">Home</a>
+    </div>
+
+    <!-- Sliding Window Content -->
+    <div class="sliding-window" id="slidingWindow">
+        <span class="close-button" id="closeButton">&times;</span>
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+
+    <!-- Content for the Home Page -->
+    <div>
+        <h1>Welcome to Our Website</h1>
+        <p>This is the homepage of our website. You can navigate through the menu items above.</p>
+    </div>
+
+    
+
+    <!-- JavaScript to handle sliding window -->
+    <script>
+        const slidingWindow = document.getElementById("slidingWindow");
+        const menuLink = document.querySelector(".menu");
+        const closeButton = document.getElementById("closeButton");
+
+        // Function to close the sliding window
+        function closeSlidingWindow() {
+            slidingWindow.style.left = "-250px"; // Hide the sliding window
+            document.removeEventListener("click", closeSlidingWindow); // Remove the click event listener
+        }
+
+        menuLink.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevent the click event from propagating to the document body
+            slidingWindow.style.left = "0"; // Show the sliding window
+            document.addEventListener("click", closeSlidingWindow); // Add a click event listener to close the sliding window
+        });
+
+        closeButton.addEventListener("click", () => {
+            closeSlidingWindow(); // Close the sliding window when clicking the close button
+        });
+    </script>
+</body>
+</html>
